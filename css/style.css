@@ -1,0 +1,542 @@
+/* Animação rolar scroll suave */
+html {
+  scroll-behavior: smooth;
+}
+
+/* animação foto perfil */
+.card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+/* Seções */
+section {
+    padding: 40px;
+    max-width: 900px;
+    margin: auto;
+}
+
+section h2 {
+    border-bottom: 2px solid #222;
+    padding-bottom: 10px;
+}
+
+/* ...existing code... */
+
+.galeria {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.post {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.2s;
+}
+
+.post img {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px rgba(0,0,0,0.3);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.post:hover img {
+    transform: scale(1.12);
+    box-shadow: 0px 8px 24px rgba(0,119,204,0.18);
+}
+
+.titulo-post {
+    margin-top: 10px;
+    font-weight: bold;
+    color: #0077cc;
+    text-align: center;
+}
+
+
+.galeria {
+  display: flex;             /* coloca as imagens lado a lado */
+  gap: 20px;                 /* espaço entre as imagens */
+  justify-content: center;   /* centraliza no meio */
+  flex-wrap: wrap;           /* quebra linha se não couber */
+  margin-top: 20px;
+}
+
+.galeria img {
+  width: 300px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 5px 5px 15px rgba(0,0,0,0.3);
+  transition: transform 0.4s ease, opacity 0.4s ease;
+  opacity: 0.9;
+}
+
+.galeria img:hover {
+  transform: rotate(-5deg) scale(1.2); 
+  opacity: 1;
+}
+
+figure {
+  text-align: center; /* <-- centraliza o texto abaixo da imagem */
+  margin: 0;
+}
+
+figure img {
+  max-width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+figcaption {
+  margin-top: 8px;
+  font-size: 16px;
+  color: #333;
+}
+
+/* Reset básico */
+body, ul {
+  margin: 0;
+  padding: 0;
+}
+
+
+
+
+
+/* Título */
+header h1 {
+  color: #fff;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+/* Menu horizontal */
+.menu-botoes {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+}
+
+/* Estilo dos botões/links */
+.menu-botoes a {
+  text-decoration: none;
+  color: #eee;
+  background-color: #3700b3;
+  padding: 10px 20px;
+  border-radius: 30px;
+  font-weight: 600;
+  font-size: 16px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  display: inline-block;
+}
+
+/* Hover com efeito "pop" */
+.menu-botoes a:hover,
+.menu-botoes a:focus {
+  background-color: #5a2ff0;
+  transform: scale(1.1);
+  outline: none;
+}
+
+/* Responsivo para mobile: menu vertical */
+@media (max-width: 600px) {
+  .menu-botoes {
+    flex-direction: column;
+    gap: 12px;
+  }
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #f1f1f1; /* opcional: cor de fundo do rodapé */
+  color: #333; /* opcional: cor do texto */
+  font-size: 14px;
+}
+
+/* Redes sociais */
+.social-links {
+  display: flex;
+  justify-content: center; /* centraliza horizontalmente */
+  align-items: center;     /* centraliza verticalmente se precisar */
+  gap: 30px;               /* espaço entre os botões */
+  margin-top: 80px;
+}
+
+.social-links img.instagram {
+  width: 41px;
+  height: 41px;
+  border-radius: 50%;
+  transition: 0.3s;
+}
+
+.social-links img.github {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  transition: 0.3s;
+}
+
+.social-links img.linkedin {
+  width: 41px;
+  height: 41px;
+  border-radius: 50%;
+  transition: 0.3s;
+}
+
+.social-links img:hover {
+  transform: scale(1.1);
+}
+
+    body {
+      position: relative;
+      background: #ffffff;
+      color: #000000;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    #tsparticles {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      z-index: -1;
+    }
+
+    header {
+      text-align: center;
+      padding: 40px 10px;
+            color: #000000;
+    }
+
+    header img {
+      margin-top: 50px;
+      width: 180px;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 4px solid #3700b3;
+      box-shadow: 0 0 20px rgba(55,0,179,0.6);
+    }
+
+    header h1 {
+      display: block;
+      border-right: 2px solid #000000; /* cursor */
+      white-space: nowrap;
+      overflow: hidden;
+      width: 0;
+      animation: typing 3s steps(15) forwards, blink 0.7s infinite;
+      color: #000000;
+      margin: 20px auto 0 auto;
+      text-align: center
+    }
+
+    @keyframes typing {
+      from { width: 0; }
+      to { width: 14ch; } /* número de letras do seu nome */
+    }
+
+    @keyframes blink {
+      50% { border-color: transparent; }
+    }
+
+    header p {
+      font-size: 16px;
+      color: #000000;
+    }
+
+    /* Menu */
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 18px;
+      margin: 20px 0;
+      padding: 0;
+    }
+
+    nav ul li {
+      display: inline;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #eee;
+      background-color: #3700b3;
+      padding: 10px 20px;
+      border-radius: 30px;
+      font-weight: 600;
+      font-size: 16px;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+      display: inline-block;
+    }
+
+    nav ul li a:hover {
+      background-color: #5a2ff0;
+      transform: scale(1.1);
+    }
+
+    .habilidades {
+      text-align: center;
+      margin: 20px auto;
+    }
+
+    .habilidades h2 {
+      margin-bottom: 20px;
+    }
+
+    .skills {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+
+    .skill {
+      text-align: center;
+    }
+
+    .skill i {
+      font-size: 40px;
+      color: #3700b3;
+      margin-bottom: 10px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      color: #aaa;
+      margin-top: 40px;
+    }
+
+    body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  
+  /* Css sobre */
+.sobre {
+  background: #f9f9f9;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  margin: 20px auto;
+  max-width: 900px;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+/* Títulos */
+.sobre h2 {
+  margin-top: 20px;
+  font-size: 28px;
+  color: #3700b3;
+  margin-bottom: 15px;
+  border-left: 6px solid #3700b3;
+  padding-left: 10px;
+}
+
+.conhecimentos h3 {
+  font-size: 28px;
+  margin-top: 20px;
+  color: #3700b3;
+  margin-top: 30px;
+  margin-bottom: 15px;
+  border-left: 6px solid #3700b3;
+  display: inline-block;
+  padding-left: 10px;
+}
+
+.conhecimentos h1 {
+  font-size: 20px;
+  margin-top: 10px;
+  color: #282528;
+  margin-bottom: 15px;
+}
+/* Texto */
+.sobre p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #333;
+  text-align: justify;
+  margin-bottom: 20px;
+}
+
+/* Lista de conhecimentos */
+.conhecimentos {
+    background: #f9f9f9;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  margin: 20px auto;
+  max-width: 900px;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+.conhecimentos nav ul {
+  list-style: none;
+  padding-left: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 10px;
+}
+
+.conhecimentos nav ul li {
+  background: #e3f2fd;
+  padding: 12px 15px;
+  border-radius: 8px;
+  color: #333;
+  font-weight: 500;
+  transition: 0.3s;
+  cursor: default;
+}
+
+.conhecimentos nav ul li:hover {
+  background: #b6a4d3;;
+  transform: translateY(-3px);
+}
+
+/* Botão voltar ao topo */
+.container-botao {
+  text-align: center;   /* centraliza o botão no meio */
+}
+
+    .botao-voltar {
+  color: white !important;
+  margin: 20px auto;
+  display: inline-block;
+  padding: 8px 20px;
+  background-color: #3700b3;   /* Cor do botão */
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 8px;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.botao-voltar:hover {
+  transform: scale(1.1);
+  background-color: #290073;   /* Cor ao passar o mouse */
+}
+
+.formacao {
+  background: #f9f9f9;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  margin: 20px auto;
+  max-width: 900px;
+  font-family: "Segoe UI", Arial, sans-serif;
+
+}
+
+.formacao h2 {
+  margin-top: 20px;
+  font-size: 28px;
+  color: #3700b3;
+  margin-bottom: 15px;
+  border-left: 6px solid #3700b3;
+  padding-left: 10px;
+}
+
+ .logos {
+  display: flex;              /* organiza conteúdo em linha */
+  justify-content: center;    /* centraliza horizontal */
+  align-items: center;        /* centraliza vertical */
+  margin: 20px auto;          /* espaçamento externo */
+  gap: 20px;
+}
+
+.logos img {
+  width: 62px;    /* tamanho da logo */
+  height: auto;   /* mantém proporção */
+  border-radius: 10px; /* cantos arredondados (opcional) */
+  transition: 0.3s;   /* efeito suave */
+}
+
+.logos img:hover {
+  transform: scale(1.1);  /* aumenta no hover */
+}
+
+.logos1 {
+  display: flex;              /* organiza conteúdo em linha */
+  justify-content: center;    /* centraliza horizontal */
+  align-items: center;        /* centraliza vertical */
+  margin: 20px auto;          /* espaçamento externo */
+  gap: 20px;
+}
+
+.luz {
+  width: 70px;    /* tamanho da logo */
+  height: auto;   /* mantém proporção */
+  border-radius: 10px; /* cantos arredondados (opcional) */
+  transition: 0.3s;   /* efeito suave */
+}
+.raio {
+  width: 60px;    /* tamanho da logo */
+  height: auto;   /* mantém proporção */
+  border-radius: 10px; /* cantos arredondados (opcional) */
+  transition: 0.3s;   /* efeito suave */
+}
+.tomada {
+  width: 65px;    /* tamanho da logo */
+  height: auto;   /* mantém proporção */
+  border-radius: 10px; /* cantos arredondados (opcional) */
+  transition: 0.3s;   /* efeito suave */
+
+}
+
+.logos1 img:hover {
+  transform: scale(1.1);  /* aumenta no hover */
+}
+
+.logo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.iftm {
+  width: 80px;    /* tamanho da logo */ 
+  height: auto;   /* mantém proporção */
+  border-radius: 10px; /* cantos arredondados (opcional) */ 
+  transition: 0.3s;   /* efeito suave */
+  margin-top: 20px;
+}
+  
+
+
+.iftm:hover {
+  transform: scale(1.1);  /* aumenta no hover */
+  
+    }
+  }
